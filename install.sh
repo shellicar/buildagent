@@ -1,13 +1,15 @@
 # Install powershell
 
 # Update the list of packages
-sudo apt-get update
+echo "apt-get update"
+apt-get update
 
 # Add repositories
-sudo apt-get install -y wget apt-transport-https software-properties-common
+apt-get install -y wget apt-transport-https software-properties-common
 wget -q "https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/packages-microsoft-prod.deb"
-sudo dpkg -i packages-microsoft-prod.deb
-sudo apt-get update
+dpkg -i packages-microsoft-prod.deb
+apt-get update
 
 # Install packages
-sudo apt-get install -y powershell nodejs
+echo "apt-get install -y powershell nodejs"
+apt-get install -y powershell nodejs
